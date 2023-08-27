@@ -11,13 +11,13 @@ npm init -y
 npx husky-init && npm install
 ```
 
-## Créer une commande
+## create a hook
 
 ```sh
 npx husky add .husky/commit-msg 'echo pouet'
 ```
 
-Contenu du fichier
+content file
 
 ```sh
 #!/usr/bin/env sh
@@ -26,12 +26,12 @@ Contenu du fichier
 echo pouet
 ```
 
-si on relance à nouveau la même commande, nous obtiendrons ce fichier
+if you run the commmand we have the new line on our file
 
 ```sh
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/\_/husky.sh"
 
 echo pouet
-echo pouet2
+echo pouet2 # <--------------- here
 ```
